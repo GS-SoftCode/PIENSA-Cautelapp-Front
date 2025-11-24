@@ -1,0 +1,72 @@
+.fondo {
+  --background: #dfeee7;
+}
+
+/* Header superior */
+.header {
+  height: 70px;
+  width: 100%;
+  background: #022c3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+}
+
+.titulo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.perfil {
+  color: #9ce6d8;
+  font-size: 34px;
+}
+
+/* Lista de notificaciones */
+.lista {
+  width: 90%;
+  max-width: 350px;
+  margin: 10px auto 20px auto;
+}
+
+/* Tarjeta */
+.noti {
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+}
+
+.ayuda {
+  background: #d1ede4;
+  border-left: 4px solid #00a99d;
+}
+
+.emergencia {
+  background: #edd6d6;
+  border-left: 4px solid #ff3b30;
+}
+
+.tipo {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.rojo {
+  color: #ff3b30;
+}
+
+.descripcion {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Fecha separadora */
+.fecha {
+  text-align: center;
+  color: #555;
+  margin: 12px 0;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 4px;
+}

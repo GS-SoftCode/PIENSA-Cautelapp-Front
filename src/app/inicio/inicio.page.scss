@@ -1,0 +1,57 @@
+.fondo {
+  --background: #dfeee7;
+}
+
+.header {
+  height: 170px;
+  width: 100%;
+  background-image: url("src/assets/cautelaft.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 90%;
+  max-width: 330px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.titulo {
+  text-align: center;
+  color: #0a8b8a;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-left: 4px;
+}
+
+.input {
+  margin-bottom: 18px;
+  height: 42px;
+}
+
+.btn {
+  --background: #0aa1a0;
+  --background-hover: #0d7d7c;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.texto {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.link {
+  color: #0aa1a0;
+  font-weight: 600;
+  cursor: pointer;
+}

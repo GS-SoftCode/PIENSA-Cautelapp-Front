@@ -1,0 +1,112 @@
+.navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background: #042f33;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 6px;
+  z-index: 1000;
+}
+
+.navigation ul {
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  justify-content: space-around;
+  padding: 0 12px;
+  margin: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  width: 33.333%;
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation ul li .icon {
+  font-size: 26px;
+  color: #aee5de;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.navigation ul li.active .icon {
+  color: #ffffff;
+  transform: translateY(-6px);
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
+}
+
+/* Bubble que se mueve horizontalmente */
+.center-bubble {
+  position: absolute;
+  bottom: 34px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e6fbfa;
+  transform: translateX(-50%);
+  transition: left 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.2s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #042f33;
+  box-shadow: 0 6px 18px rgba(2, 40, 40, 0.35);
+}
+
+.center-bubble .bubble-inner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #042f33;
+}
+
+@media (max-width: 420px) {
+  .center-bubble { width: 64px; height: 64px; bottom: 30px; }
+  .center-bubble .bubble-inner { width: 40px; height: 40px; }
+}
+
+/* franja superior clara y notch que sigue el bubble */
+.navigation {
+  --bubble-left: 50%;
+}
+
+.navigation::before {
+  /* banda clara encima de la barra */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -28px;
+  height: 28px;
+  background: #e6fbfa; /* color claro de la cabecera */
+  z-index: 0;
+}
+
+.navigation::after {
+  /* notch (semicírculo) con el mismo color de la banda clara; su posición se mueve con --bubble-left */
+  content: '';
+  position: absolute;
+  width: 72px;
+  height: 36px;
+  border-radius: 0 0 36px 36px;
+  background: #e6fbfa;
+  top: -36px;
+  left: calc(var(--bubble-left) - 36px);
+  z-index: 1;
+  transition: left 0.28s cubic-bezier(.2,.9,.2,1);
+}
+
+/* Aseguramos que el bubble queda por encima del notch */
+.center-bubble { z-index: 3; }
+
+/* Ajustes de colores para que el borde del bubble contraste con la banda clara */
+.center-bubble { border: 4px solid #0aa1a0; background: #e6fbfa; }
+.center-bubble .bubble-inner { background: #052b2c; }

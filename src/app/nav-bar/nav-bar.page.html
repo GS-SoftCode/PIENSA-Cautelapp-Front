@@ -1,0 +1,26 @@
+<div class="navigation" #nav>
+  <ul>
+    <li [class.active]="activeIndex === 0" (click)="setActive(0)">
+      <span class="icon" [hidden]="activeIndex === 0"><ion-icon name="alarm-outline"></ion-icon></span>
+    </li>
+
+    <li [class.active]="activeIndex === 1" (click)="setActive(1)">
+      <span class="icon" [hidden]="activeIndex === 1"><ion-icon name="notifications-outline"></ion-icon></span>
+    </li>
+
+    <li [class.active]="activeIndex === 2" (click)="setActive(2)">
+      <span class="icon" [hidden]="activeIndex === 2"><ion-icon name="watch-outline"></ion-icon></span>
+    </li>
+  </ul>
+
+  
+  <div
+    class="center-bubble"
+    (pointerdown)="onPointerDown($event)"
+    [style.left]="bubbleLeftPercent + '%'"
+  >
+    <div class="bubble-inner">
+      <ion-icon [name]="iconNames[activeIndex]"></ion-icon>
+    </div>
+  </div>
+</div>

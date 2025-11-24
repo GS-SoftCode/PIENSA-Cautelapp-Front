@@ -1,0 +1,54 @@
+<ion-content class="fondo">
+
+  <div class="header"></div>
+
+  <div class="container">
+
+    <h2 class="titulo">CREAR CUENTA</h2>
+
+    <label class="label">Nombre de usuario</label>
+    <ion-input
+      fill="outline"
+      placeholder="Ingresa tu usuario"
+      [(ngModel)]="username"
+      class="input"
+    ></ion-input>
+
+    <label class="label">Email</label>
+    <ion-input
+      fill="outline"
+      placeholder="Ingresa tu correo"
+      [(ngModel)]="email"
+      class="input"
+    ></ion-input>
+
+    <label class="label">Contraseña</label>
+    <ion-input
+      type="password"
+      fill="outline"
+      placeholder="Ingresa tu contraseña"
+      [(ngModel)]="password"
+      class="input"
+    ></ion-input>
+
+    <label class="label">Confirmar Contraseña</label>
+    <ion-input
+      type="password"
+      fill="outline"
+      placeholder="Vuelve a ingresar tu contraseña"
+      [(ngModel)]="confirmPassword"
+      class="input"
+    ></ion-input>
+
+    <ion-button expand="block" class="btn" (click)="crearCuenta()">
+      Crear Cuenta
+    </ion-button>
+
+    <p class="texto">
+      ¿Ya tienes cuenta?
+      <span class="link" (click)="irLogin()">Inicia sesión aquí</span>
+    </p>
+
+  </div>
+
+</ion-content>
