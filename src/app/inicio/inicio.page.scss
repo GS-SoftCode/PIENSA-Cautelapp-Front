@@ -1,14 +1,21 @@
 .fondo {
-  --background: #dfeee7;
+  --background: #DEEFE7; // fondo claro de la paleta
 }
 
 .header {
-  height: 170px;
   width: 100%;
-  background-image: url("src/assets/cautelaft.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #002333; // azul oscuro de la paleta
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0; // altura adaptable
+}
+
+.header-logo {
+  max-width: 240px;
+  width: 45%; // responsive en móvil
+  height: auto;
+  object-fit: contain;
 }
 
 .container {
@@ -20,7 +27,7 @@
 
 .titulo {
   text-align: center;
-  color: #0a8b8a;
+  color: #159A9C; // teal de la paleta
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 25px;
@@ -31,16 +38,24 @@
   font-weight: 600;
   margin-bottom: 6px;
   margin-left: 4px;
+  color: #000000; // asegurar contraste sobre fondo claro
 }
 
 .input {
   margin-bottom: 18px;
   height: 42px;
+  --highlight-color-focused: #159A9C;
+  --border-color: #B4BEC9;
+  --border-color-focused: #159A9C; // color del contorno al enfocar
+  --highlight-color: #159A9C; // fallback para algunas plataformas
+  --placeholder-color: #6b7680; // legible sobre blanco
+  --color: #000000; // color del texto escrito
+  --background: #FFFFFF; // fondo del campo para contraste
 }
 
 .btn {
-  --background: #0aa1a0;
-  --background-hover: #0d7d7c;
+  --background: #159A9C;
+  --background-hover: #0A8B8A;
   border-radius: 8px;
   margin-top: 8px;
 }
@@ -48,10 +63,21 @@
 .texto {
   text-align: center;
   margin-top: 14px;
+  color: #000000;
 }
 
 .link {
-  color: #0aa1a0;
+  color: #159A9C;
   font-weight: 600;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 32px 0;
+  }
+  .header-logo {
+    max-width: 320px;
+    width: 40%;
+  }
 }
